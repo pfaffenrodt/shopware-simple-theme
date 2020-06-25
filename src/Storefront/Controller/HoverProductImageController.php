@@ -45,7 +45,7 @@ class HoverProductImageController extends StorefrontController
             throw new ProductNotFoundException($productId);
         }
 
-        if ($product->getMedia()->first() === null) {
+        if ($product->getMedia()->count() < 2) {
             throw new \Exception('This product have no image to show');
         }
 
