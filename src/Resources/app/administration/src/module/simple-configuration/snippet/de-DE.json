@@ -1,0 +1,16 @@
+{
+    "simple-settings": {
+        "general": {
+            "mainMenuItemGeneral": "Einstellungen"
+        },
+        "index": {
+            "title": "Einstellungen",
+            "tabGeneral": "Allgemein",
+            "tabHeader": "Header"
+        },
+        "system-config": {
+            "labelSalesChannelSelect": "Sales Channel",
+            "inherited": "Inherited"
+        }
+    }
+}

@@ -1,0 +1,43 @@
+/*
+ * Vendors
+ * ------- */
+@import 'vendor/fonts';
+@import "../../../node_modules/aos/src/sass/aos";
+
+@import 'base/typography';
+
+ /*
+ * Layout-related sections
+ * ----------------------- */
+@import "layout/global";
+@import 'layout/header';
+@import 'layout/main-navigation';
+@import "layout/navigation-flyout";
+@import 'layout/container';
+@import "layout/footer";
+
+@import 'page/home';
+@import "page/product-detail/product-detail";
+@import "page/product-detail/configurator";
+
+/*
+ * Components
+ * ---------- */
+@import 'component/cms-sections';
+@import 'component/cms-element';
+@import 'component/product-box';
+@import 'component/filter-panel';
+@import 'component/filter-boolean';
+@import 'component/category-navigation';
+@import 'component/_pagination';
+@import "component/delivery-status";
+@import "component/offcanvas";
+@import "component/button";
+@import "component/notification-bar";
+@import "component/alert";
+@import "component/breadcrumb";
+@import "component/gallery-slider";
+
+.breadcrumb {
+    display: none;
+}

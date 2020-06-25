@@ -1,0 +1,21 @@
+{% sw_extends '@Storefront/storefront/layout/navigation/flyout.html.twig' %}
+
+{% set flyoutIcon = shopware.config.SasSimple.config.flyoutIcon %}
+
+{% block layout_navigation_flyout_teaser %}{% endblock %}
+{% block layout_navigation_flyout_bar_category %}{% endblock %}
+{% block layout_navigation_flyout_bar_close %}{% endblock %}
+{% block layout_navigation_flyout_bar %}{% endblock %}
+
+{% block layout_navigation_flyout_categories %}
+    <div class="col">
+        <div class="navigation-flyout-categories">
+            {% block layout_navigation_flyout_categories_recoursion %}
+                {% sw_include '@Storefront/storefront/layout/navigation/categories.html.twig' with {
+                    navigationTree: navigationTree.children,
+                    navigationMedia: navigationTree.category.media
+                } only %}
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}

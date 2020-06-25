@@ -1,0 +1,104 @@
+.nav-main {
+    background-color: $simple-color-navigation-background;
+    position: relative;
+    height: 53px;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 53px;
+        width: 100%;
+        height: 15px;
+        background: $simple-color-navigation-shadow;
+    }
+}
+
+.main-navigation-menu {
+    font-size: $font-size-base;
+    justify-content: center;
+    align-items: center;
+    &.main-navigation-bottom {
+        background-color: $simple-color-navigation-background;
+    }
+}
+
+.main-navigation-home {
+    margin-right: 25px;
+}
+
+.main-navigation-footer {
+    background: #1a1a1a;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    .nav {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: auto auto auto auto;
+        .nav-link {
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            border-right: solid 1px lighten(#1a1a1a, 10%);
+        }
+    }
+}
+
+.nav-link-bottom {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+    .nav-link-description {
+        display: none;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .header-main {
+        .main-navigation-link{
+            &.active {
+                .main-navigation-link-text {
+                    padding: 0;
+                    border-bottom: none;
+                }
+            }
+            .main-navigation-link-text {
+                padding: 0;
+                border-bottom: none;
+            }
+        }
+    }
+    .main-navigation-link {
+        color: $simple-color-navigation-link;
+        padding: 15px 15px 12px 15px;
+        text-transform: uppercase;
+        font-weight: $font-weight-semibold;
+        letter-spacing: 1.5px;
+
+        &:hover,
+        &.is-open {
+            color: $simple-color-navigation-link-hover;
+        }
+
+        &.active {
+            color: $simple-color-navigation-link-active;
+            font-weight: $font-weight-semibold;
+
+            .main-navigation-link-text {
+                border-bottom-color: transparent;
+                position: relative;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 4px;
+                    bottom: -14px;
+                    background: $simple-color-navigation-link-active-border;
+                }
+            }
+        }
+    }
+}

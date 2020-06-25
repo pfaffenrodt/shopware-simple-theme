@@ -1,0 +1,52 @@
+.notification-bar {
+    background: $simple-color-notificationbar-background;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:before,
+    &:after {
+        background: $simple-color-notificationbar-background;
+        position: absolute;
+        top: 0;
+        content: "";
+        height: 100%;
+        width: 50vw;
+    }
+    &:after {
+        right: -50vw;
+    }
+    &:before {
+        left: -50vw;
+    }
+    .icon {
+        color: $simple-color-notificationbar-color;
+        margin-left: auto;
+        cursor: pointer;
+        svg {
+            top: 0;
+        }
+    }
+    .notification-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 0;
+        p {
+            text-align: center;
+            font-size: 14px;
+            color: $simple-color-notificationbar-color;
+            margin: 0;
+        }
+        a {
+            color: $simple-color-notificationbar-color;
+            text-decoration: underline;
+        }
+        .icon {
+            color: $simple-color-notificationbar-color;
+            > svg {
+                top: 0;
+            }
+        }
+    }
+}

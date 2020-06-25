@@ -1,0 +1,11 @@
+.filter-panel-item {
+    margin-bottom: 5px;
+    .filter-panel-item-toggle {
+        border-radius: $border-radius;
+        line-height: 24px;
+    }
+}
+
+.icon.icon-filter-panel-item-toggle {
+    margin-left: 0;
+}

@@ -1,0 +1,16 @@
+{% block product_image_grid %}
+
+<div class="product-image-grid">
+    {% for image in mediaItems %}
+        <div class="image-grid-item item-{{ loop.index }}">
+            {% sw_thumbnails 'product-image-grid-thumbnails' with {
+                media: image,
+                sizes: {
+                    'default': '200px'
+                }
+            } %}
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

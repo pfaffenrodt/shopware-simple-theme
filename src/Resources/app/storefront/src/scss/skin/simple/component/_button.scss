@@ -1,0 +1,22 @@
+.btn-buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding: 7px 20px 7px 10px;
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > svg {
+            top: auto;
+            width: 17px;
+            height: 17px;
+        }
+    }
+}
+
+
+.btn-primary {
+    color: #fff;
+}

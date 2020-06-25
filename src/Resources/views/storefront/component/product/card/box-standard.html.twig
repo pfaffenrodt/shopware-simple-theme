@@ -1,0 +1,57 @@
+{% sw_extends '@Storefront/storefront/component/product/card/box-standard.html.twig' %}
+
+{% block component_product_box_rating %}{% endblock %}
+
+{% block component_product_box_image %}
+    <div class="product-image-wrapper">
+        {# fallback if display mode is not set #}
+        {% set displayMode = displayMode ?: 'standard' %}
+
+        {# set display mode 'cover' for box-image with standard display mode #}
+        {% if layout == 'image' and displayMode == 'standard' %}
+            {% set displayMode = 'cover' %}
+        {% endif %}
+
+        <a href="{{ seoUrl('frontend.detail.page', {'productId': product.id}) }}"
+           title="{{ product.translated.name }}"
+           class="product-image-link is-{{ displayMode }}"
+        >
+            {% if product.cover.media.url %}
+                {% set attributes = {
+                    'class': 'product-image is-'~displayMode,
+                    'alt': (product.cover.media.translated.alt ?: ''),
+                    'title': (product.cover.media.translated.title ?: '')
+                } %}
+
+                {% if displayMode == 'cover' or displayMode == 'contain' %}
+                    {% set attributes = attributes|merge({ 'data-object-fit': displayMode }) %}
+                {% endif %}
+
+                <figure class="product-figure"
+                        data-image-hover-plugin="true"
+                        data-product-id="{{ product.id }}"
+                        data-loaded="false"
+                >
+                    {% sw_thumbnails 'product-image-thumbnails' with {
+                        media: product.cover.media,
+                        sizes: {
+                            'xs': '501px',
+                            'sm': '315px',
+                            'md': '427px',
+                            'lg': '333px',
+                            'xl': '284px'
+                        }
+                    } %}
+                </figure>
+            {% else %}
+                <div class="product-image-placeholder">
+                    {% sw_icon 'placeholder' style {
+                        'size': 'fluid'
+                    } %}
+                </div>
+            {% endif %}
+        </a>
+    </div>
+{% endblock %}
+
+{% block component_product_box_description %}{% endblock %}

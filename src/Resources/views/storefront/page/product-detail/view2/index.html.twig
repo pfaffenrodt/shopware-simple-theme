@@ -1,0 +1,50 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/index.html.twig' %}
+
+{% block page_product_detail_breadcrumb %}{% endblock %}
+
+{% block page_product_detail %}
+    <section class="product-detail-view2">
+        {{ parent() }}
+    </section>
+{% endblock %}
+
+{% block page_product_detail_headline %}{% endblock %}
+
+{% block page_product_detail_media %}
+    <div class="col-lg-6 product-detail-media">
+        {% if page.product.media %}
+            {% sw_include '@Storefront/storefront/element/cms-element-image-gallery.html.twig' with {
+                'mediaItems': mediaItems,
+                'zoom': true,
+                'zoomModal': true,
+                'displayMode': 'cover',
+                'minHeight': '700px',
+                'navigationArrows': false,
+                'navigationDots': false,
+                'galleryPosition': 'left',
+                'isProduct': true,
+                'fallbackImageTitle': page.product.translated.name,
+                'startIndexThumbnails': page.product.cover.position + 1,
+                'startIndexSlider': page.product.cover.position + 1
+            } %}
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block page_product_detail_buy %}
+    <div class="col product-detail-buy">
+        {% if shopware.config.SasSimple.config.detailShowBreadcrumb %}
+            <div class="breadcrumb product-breadcrumb container">
+                {% sw_include '@Storefront/storefront/component/product/breadcrumb.html.twig' with {
+                    navigationTree: page.header.navigation.tree,
+                    categoryTree: page.product.categoryTree|last,
+                    product: page.product
+                } only %}
+            </div>
+        {% endif %}
+        {% sw_include '@Storefront/storefront/page/product-detail/view2/headline.html.twig' %}
+        {% sw_include '@Storefront/storefront/page/product-detail/view2/buy-widget.html.twig' %}
+    </div>
+{% endblock %}
+
+

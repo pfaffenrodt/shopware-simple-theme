@@ -1,0 +1,324 @@
+{
+    "name": "Simple",
+    "author": "Shape & Shift",
+    "views": [
+        "@Storefront",
+        "@Plugins",
+        "@Simple"
+    ],
+    "style": [
+        "app/storefront/src/scss/variables.scss",
+        "@Storefront",
+        "app/storefront/src/scss/base.scss"
+    ],
+    "script": [
+        "@Storefront",
+        "app/storefront/dist/storefront/js/sas-simple.js"
+    ],
+    "config": {
+        "blocks": {
+            "headerColor": {
+                "label": {
+                    "en-GB": "Header colours",
+                    "de-DE": "Header-Farben"
+                }
+            },
+            "productBox": {
+                "label": {
+                    "en-GB": "Productbox colours",
+                    "de-DE": "Produktbox-Farben"
+                }
+            },
+            "footerColor": {
+                "label": {
+                    "en-GB": "Footer colours",
+                    "de-DE": "Footer-Farben"
+                }
+            }
+        },
+        "fields": {
+            "sw-color-brand-primary": {
+                "value": "#358ED7"
+            },
+            "sw-color-brand-secondary": {
+                "value": "#000"
+            },
+            "sw-background-color": {
+                "value": "#fff"
+            },
+            "sw-border-color": {
+                "value": "#ddd"
+            },
+            "sw-font-family-base": {
+                "value": "'Lato', sans-serif"
+            },
+            "sw-font-family-headline": {
+                "value": "'Lato', sans-serif"
+            },
+            "sw-text-color": {
+                "value": "#000"
+            },
+            "sw-headline-color": {
+                "value": "#ddd"
+            },
+            "sw-color-price": {
+                "value": "#000"
+            },
+            "sw-color-buy-button": {
+                "value": "#000"
+            },
+            "sw-color-buy-button-text": {
+                "value": "#fff"
+            },
+            "simple-color-header-background": {
+                "label": {
+                    "en-GB": "Header background",
+                    "de-DE": "Header Hintergrund"
+                },
+                "type": "color",
+                "value": "#fff",
+                "editable": true,
+                "block": "headerColor",
+                "section": "header"
+            },
+            "simple-color-notificationbar-background": {
+                "label": {
+                    "en-GB": "Notification bar background",
+                    "de-DE": "Notification bar Hintergrund"
+                },
+                "type": "color",
+                "value": "#1a1a1a",
+                "editable": true,
+                "block": "headerColor",
+                "section": "topBar"
+            },
+            "simple-color-notificationbar-color": {
+                "label": {
+                    "en-GB": "Notification bar text color",
+                    "de-DE": "Notification bar Text Farbe"
+                },
+                "type": "color",
+                "value": "#fff",
+                "editable": true,
+                "block": "headerColor",
+                "section": "topBar"
+            },
+            "simple-color-topbar-background": {
+                "label": {
+                    "en-GB": "Top bar background",
+                    "de-DE": "Top bar Hintergrund"
+                },
+                "type": "color",
+                "value": "#f9f9f9",
+                "editable": true,
+                "block": "headerColor",
+                "section": "topBar"
+            },
+            "simple-color-topbar-color": {
+                "label": {
+                    "en-GB": "Top bar color",
+                    "de-DE": "Top bar Farbe"
+                },
+                "type": "color",
+                "value": "#798490",
+                "editable": true,
+                "block": "headerColor",
+                "section": "topBar"
+            },
+            "simple-color-topbar-color-hover": {
+                "label": {
+                    "en-GB": "Top bar color hover",
+                    "de-DE": "Top bar Farbe hover"
+                },
+                "type": "color",
+                "value": "#000",
+                "editable": true,
+                "block": "headerColor",
+                "section": "topBar"
+            },
+            "simple-color-navigation-background": {
+                "label": {
+                    "en-GB": "Navigation background",
+                    "de-DE": "Navigation Hintergrund"
+                },
+                "type": "color",
+                "value": "#f9f9f9",
+                "editable": true,
+                "block": "headerColor",
+                "section": "navigation"
+            },
+            "simple-color-navigation-shadow": {
+                "label": {
+                    "en-GB": "Navigation shadow",
+                    "de-DE": "Navigation Schatten"
+                },
+                "type": "color",
+                "value": "linear-gradient(180deg, rgba(0, 0, 16, 0.05) 0, rgba(255, 255, 255, 0));",
+                "editable": true,
+                "block": "headerColor",
+                "section": "navigation"
+            },
+            "simple-color-navigation-link": {
+                "label": {
+                    "en-GB": "Navigation link",
+                    "de-DE": "Navigation Link"
+                },
+                "type": "color",
+                "value": "#1a1a1a",
+                "editable": true,
+                "block": "headerColor",
+                "section": "navigation"
+            },
+            "simple-color-navigation-link-hover": {
+                "label": {
+                    "en-GB": "Navigation link hover",
+                    "de-DE": "Navigation Link hover"
+                },
+                "type": "color",
+                "value": "#000",
+                "editable": true,
+                "block": "headerColor",
+                "section": "navigation"
+            },
+            "simple-color-navigation-link-active": {
+                "label": {
+                    "en-GB": "Navigation link active",
+                    "de-DE": "Navigation Link aktiv"
+                },
+                "type": "color",
+                "value": "#000",
+                "editable": true,
+                "block": "headerColor",
+                "section": "navigation"
+            },
+            "simple-color-navigation-link-active-border": {
+                "label": {
+                    "en-GB": "Navigation link active border",
+                    "de-DE": "Navigation Link aktiv border"
+                },
+                "type": "color",
+                "value": "#358ED7",
+                "editable": true,
+                "block": "headerColor",
+                "section": "navigation"
+            },
+            "simple-color-navigation-flyout-background": {
+                "label": {
+                    "en-GB": "Navigation Flyout background",
+                    "de-DE": "Navigation Flyout Hintergrund"
+                },
+                "type": "color",
+                "value": "#1C1C1C",
+                "editable": true,
+                "block": "headerColor",
+                "section": "navigation"
+            },
+            "simple-color-navigation-flyout-link-color": {
+                "label": {
+                    "en-GB": "Navigation Flyout link color",
+                    "de-DE": "Navigation Flyout Link Farbe"
+                },
+                "type": "color",
+                "value": "#fff",
+                "editable": true,
+                "block": "headerColor",
+                "section": "navigation"
+            },
+            "simple-color-navigation-flyout-link-color-active": {
+                "label": {
+                    "en-GB": "Navigation Flyout link active color",
+                    "de-DE": "Navigation Flyout Link aktiv Farbe"
+                },
+                "type": "color",
+                "value": "#fff",
+                "editable": true,
+                "block": "headerColor",
+                "section": "navigation"
+            },
+            "simple-color-product-box-name": {
+                "label": {
+                    "en-GB": "Prouctbox name",
+                    "de-DE": "Prouktbox Name"
+                },
+                "type": "color",
+                "value": "#000",
+                "editable": true,
+                "block": "productBox"
+            },
+            "simple-color-product-box-name-hover": {
+                "label": {
+                    "en-GB": "Prouctbox name hover",
+                    "de-DE": "Prouktbox Name hover"
+                },
+                "type": "color",
+                "value": "#798490",
+                "editable": true,
+                "block": "productBox"
+            },
+            "simple-color-product-box-price": {
+                "label": {
+                    "en-GB": "Prouctbox price",
+                    "de-DE": "Prouktbox Preis"
+                },
+                "type": "color",
+                "value": "#000",
+                "editable": true,
+                "block": "productBox"
+            },
+            "simple-color-product-box-description": {
+                "label": {
+                    "en-GB": "Prouctbox description",
+                    "de-DE": "Prouktbox Beschribung"
+                },
+                "type": "color",
+                "value": "#798490",
+                "editable": true,
+                "block": "productBox"
+            },
+            "simple-color-footer-background": {
+                "label": {
+                    "en-GB": "Footer background",
+                    "de-DE": "Footer Hintergrund"
+                },
+                "type": "color",
+                "value": "#1C1C1C",
+                "editable": true,
+                "block": "footerColor",
+                "section": "footer"
+            },
+            "simple-color-footer-text-color": {
+                "label": {
+                    "en-GB": "Text color",
+                    "de-DE": "Schriftfarbe"
+                },
+                "type": "color",
+                "value": "#fff",
+                "editable": true,
+                "block": "footerColor",
+                "section": "footer"
+            },
+            "simple-color-footer-headline-color": {
+                "label": {
+                    "en-GB": "Headline color",
+                    "de-DE": "Überschrift Farbe"
+                },
+                "type": "color",
+                "value": "#fff",
+                "editable": true,
+                "block": "footerColor",
+                "section": "footer"
+            },
+            "simple-color-footer-headline-border-color": {
+                "label": {
+                    "en-GB": "Headline border color",
+                    "de-DE": "Überschrift Linie Farbe"
+                },
+                "type": "color",
+                "value": "#666",
+                "editable": true,
+                "block": "footerColor",
+                "section": "footer"
+            }
+        }
+    }
+}

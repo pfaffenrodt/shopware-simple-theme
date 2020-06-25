@@ -1,0 +1,41 @@
+//fonts
+$sw-font-family-base:  Arial,Arial Unicode MS,Helvetica,DejaVu Sans,Lucida Sans Unicode,sans-serif !default;
+$sw-font-family-headline: Arial,Arial Unicode MS,Helvetica,DejaVu Sans,Lucida Sans Unicode,sans-serif !default;
+
+$h1-font-size: 60;
+
+$dark-transparent: rgba(0,0,0,0.8);
+$sw-border-color: rgba(0,0,0,0.8);
+
+$sw-color-buy-button: rgb(0, 0, 0);
+$sw-color-buy-button-text: #fff;
+
+$sw-text-color: #1C1C1C;
+$sw-color-brand-primary: #1C1C1C;
+
+$icon-base-color: #1C1C1C;
+
+$simple-color-header-background: #fff;
+
+$simple-color-topbar-background: #f9f9f9;
+$simple-color-topbar-color: #666;
+$simple-color-topbar-color-hover: #666;
+
+$simple-color-notificationbar-background: #1a1a1a;
+$simple-color-notificationbar-color: #fff;
+
+$simple-color-navigation-link: #1a1a1a;
+$simple-color-navigation-link-hover: $primary;
+$simple-color-navigation-link-active: $primary;
+$simple-color-navigation-shadow: linear-gradient(180deg,rgba(0,0,16,.05) 0,hsla(0,0%,100%,0));
+$simple-color-navigation-background: #f9f9f9;
+$simple-color-navigation-link-active-border: $primary;
+
+$simple-color-navigation-flyout-background: #1a1a1a;
+$simple-color-navigation-flyout-link-color: #fff;
+$simple-color-navigation-flyout-link-color-active: #fff;
+
+$simple-color-footer-background: #1C1C1C;
+$simple-color-footer-text-color: #fff;
+$simple-color-footer-headline-color: #fff;
+$simple-color-footer-headline-border-color: #666;

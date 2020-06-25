@@ -1,0 +1,28 @@
+{
+    "simple": {
+        "navigation": {
+            "home": "Home"
+        },
+        "topbar": {
+            "first_column": "Fast delivery",
+            "second_column": "Free shipping & returns",
+            "third_column": "100 DAYS RIGHT OF RETURN"
+        },
+        "notificationbar": {
+            "text": "Free delivery on all orders. <a href=\"#\">Details</a>"
+        },
+        "productDetail": {
+            "buyBox_info": "<strong>Decide relaxed at home</strong><br> If the new favorite piece does not please you, simply return it within 30 days free of charge & comfortably."
+        },
+        "basket": {
+            "emptyBasketKeepShopping": "Keep shopping"
+        },
+        "footer": {
+            "socialHeadline": "Follow us",
+            "paymentHeadline": "Payment & Shipping"
+        }
+    },
+    "footer": {
+        "copyrightInfo": "© 2020 MUSTERFIRMA GMBH All rights reserved."
+    }
+}

@@ -1,0 +1,10 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/tabs.html.twig' %}
+
+{% block page_product_detail_tabs_content_description %}
+    <div class="tab-pane fade show {% if (ratingSuccess != 1) and (ratingSuccess != -1) %}active{% endif %}"
+         id="description-tab-pane"
+         role="tabpanel"
+         aria-labelledby="description-tab">
+        {% sw_include '@Storefront/storefront/page/product-detail/view2/description.html.twig' %}
+    </div>
+{% endblock %}

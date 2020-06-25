@@ -1,0 +1,16 @@
+{
+    "simple-settings": {
+        "general": {
+            "mainMenuItemGeneral": "Simple Theme Settings"
+        },
+        "index": {
+            "title": "Settings",
+            "tabGeneral": "General",
+            "tabHeader": "Header"
+        },
+        "system-config": {
+            "labelSalesChannelSelect": "Sales Channel",
+            "inherited": "Inherited"
+        }
+    }
+}

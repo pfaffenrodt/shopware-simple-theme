@@ -1,0 +1,36 @@
+<sw-page class="sw-settings-index" :showSmartBar="false">
+    <template #content>
+        <sw-card-view>
+            <sw-tabs class="sw-settings__tabs"
+                     :isVertical="true"
+                     :small="false"
+                     defaultItem="shop">
+                <template #default="{ active }">
+                    <sw-tabs-item class="sw-settings__tab-shop"
+                                  name="shop"
+                                  :activeTab="active"
+                                  :title="$tc('simple-settings.index.tabGeneral')">
+                        {{ $tc('simple-settings.index.tabGeneral') }}
+                    </sw-tabs-item>
+                    <sw-tabs-item class="sw-settings__tab-shop"
+                                  name="header"
+                                  :activeTab="active"
+                                  :title="$tc('simple-settings.index.tabHeader')">
+                        {{ $tc('simple-settings.index.tabHeader') }}
+                    </sw-tabs-item>
+                </template>
+
+                <template #content="{ active }">
+                    <h1 class="sw-settings__content-header">{{ $tc('simple-settings.index.title') }}</h1>
+                    <sw-card class="sw-settings__card">
+                        <slot name="shop">
+                            <div v-show="active === 'shop'" class="sw-settings__content-grid">
+                                {% block sw_settings_content_card_slot_shop %}{% endblock %}
+                            </div>
+                        </slot>
+                    </sw-card>
+                </template>
+            </sw-tabs>
+        </sw-card-view>
+    </template>
+</sw-page>

@@ -1,0 +1,23 @@
+.cms-section {
+    &.text-small {
+        font-size: 12px;
+        h1 {
+            font-size: 18px;
+        }
+        h2 {
+            font-size: 16px;
+        }
+        h3 {
+            font-size: 14px;
+        }
+    }
+}
+
+.cms-section-default {
+    &.full-width {
+        .cms-block-container {
+            //max-width: 1220px;
+            //margin: 0 auto;
+        }
+    }
+}

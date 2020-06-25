@@ -1,0 +1,6 @@
+.gallery-slider-thumbnails-controls-prev,
+.gallery-slider-thumbnails-controls-next {
+    &[disabled] {
+        display: none;
+    }
+}

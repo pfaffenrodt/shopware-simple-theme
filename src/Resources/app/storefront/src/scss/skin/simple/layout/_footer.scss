@@ -1,0 +1,106 @@
+.footer-main {
+    border-top: none;
+    background: $simple-color-footer-background;
+    color: $simple-color-footer-text-color;
+    a {
+        color: $simple-color-footer-text-color;
+    }
+}
+
+.footer-logos {
+    height: auto;
+}
+
+.footer-logo {
+    padding: 0 16px;
+    margin-bottom: 16px;
+}
+
+.footer-column {
+    border-bottom: none;
+}
+
+.footer-column-headline {
+    color: $simple-color-footer-headline-color;
+    font-size: 22px;
+    font-weight: normal;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #666;
+}
+
+.footer-copyright,
+.footer-disclaimer,
+.footer-vat {
+    color: darken( $simple-color-footer-text-color, 50% );
+    font-size: 14px;
+    max-width: 850px;
+    margin: 0 auto 25px auto;
+    text-align: center;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    .social-headline {
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        color: $simple-color-footer-text-color;
+        font-size: 14px;
+    }
+    .social-link {
+        background: white;
+        border-radius: 999px;
+        padding: 10px;
+        margin: 0 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s ease-in-out;
+        &:hover {
+            opacity: .7;
+        }
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.footer-small-headline {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $simple-color-footer-text-color;
+    font-size: 14px;
+}
+
+.footer-service-menu-item,
+.footer-service-menu-link, {
+    color: darken( $simple-color-footer-text-color, 50% );
+}
+
+.footer-service-menu-item, {
+    &:after {
+        border-color: darken( $simple-color-footer-text-color, 50% );
+    }
+}
+.footer-bottom {
+    a {
+        text-decoration: underline;
+        color: darken( $simple-color-footer-text-color, 50% );
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .footer-columns {
+        border-bottom: 1px solid #666;
+        font-size: 14px;
+    }
+    .footer-service-menu-list {
+        display: block;
+    }
+}

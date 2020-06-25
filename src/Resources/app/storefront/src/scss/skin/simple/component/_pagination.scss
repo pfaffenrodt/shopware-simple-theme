@@ -1,0 +1,11 @@
+.pagination {
+    justify-content: center;
+    .page-item {
+        &.disabled {
+            .page-link {
+                background: none;
+                border: none;
+            }
+        }
+    }
+}

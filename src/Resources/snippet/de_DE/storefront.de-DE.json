@@ -1,0 +1,28 @@
+{
+    "simple": {
+        "navigation": {
+            "home": "Home"
+        },
+        "topbar": {
+            "first_column": "Schnelle Lieferung",
+            "second_column": "Kostenloser Versand & Rückversand",
+            "third_column": "100 TAGE RÜCKGABERECHT"
+        },
+        "notificationbar": {
+            "text": "Kostenloser Versand und Rückgabe für Alle Bestellungen. <a href=\"#\">Details</a>"
+        },
+        "productDetail": {
+            "buyBox_info": "<b>Entspannt zu Hause entscheiden</b><br>Sollte das neue Lieblingsstück doch nicht gefallen, senden Sie es einfach innerhalb von 30 Tagen kostenfrei &amp; komfortabel zurück."
+        },
+        "basket": {
+            "emptyBasketKeepShopping": "Weiter shoppen"
+        },
+        "footer": {
+            "socialHeadline": "Follow us",
+            "paymentHeadline": "Zahlarten & Versand"
+        }
+    },
+    "footer": {
+        "copyrightInfo": "© 2020 MUSTERFIRMA GMBH All rights reserved."
+    }
+}

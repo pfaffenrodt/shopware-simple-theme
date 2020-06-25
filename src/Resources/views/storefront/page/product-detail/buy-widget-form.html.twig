@@ -1,0 +1,59 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/buy-widget-form.html.twig' %}
+
+{% set showQuantitySelect =  shopware.config.SasSimple.config.detailShowQuantitySelect %}
+
+{% block page_product_detail_buy_quantity_container %}
+
+    <!--
+    <div class="col-12">
+        {% sw_include '@Storefront/storefront/utilities/alert.html.twig' with {
+            type:"info",
+            content:"Wir empfehlen dir die normale Größe."
+        } %}
+    </div>
+    -->
+
+    <div class="col-12 product-detail-delivery-information">
+        {% sw_include '@Storefront/storefront/component/delivery-information.html.twig' %}
+    </div>
+
+    {% if showQuantitySelect == true %}
+        <div class="col-4">
+            {% block page_product_detail_buy_quantity %}
+                <select name="lineItems[{{ product.id }}][quantity]"
+                        class="custom-select product-detail-quantity-select">
+                    {% for quantity in range(product.minPurchase, product.calculatedMaxPurchase, product.purchaseSteps) %}
+                        <option value="{{ quantity }}">
+                            {{ quantity }}{% if product.packUnit %} {{ product.packUnit }}{% endif %}
+                        </option>
+                    {% endfor %}
+                </select>
+            {% endblock %}
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block page_product_detail_buy_button_container %}
+    <div class="{{ showQuantitySelect ? 'col-8' : 'col-12' }}">
+        {% block page_product_detail_buy_button %}
+            <button class="btn btn-primary btn-block btn-buy"
+                    title="{{ "detail.addProduct"|trans|striptags }}"
+                    aria-label="{{ "detail.addProduct"|trans|striptags }}">
+                {{ "detail.addProduct"|trans|sw_sanitize }}
+                {% sw_icon 'cart' %}
+            </button>
+        {% endblock %}
+    </div>
+
+    {% if shopware.config.SasSimple.config.detailShowBuyBoxInfo %}
+        <div class="buybox-info">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="27"><path d="M1.451 5.887l3.861-4.601 4.602 3.86m-4.602-3.86c.937 10.7 7.276 19.628 16.094 24.333" fill="none" fill-rule="evenodd" stroke="#38403E"/></svg>
+                <p class="buybox-text">
+                    {{ "simple.productDetail.buyBox_info"|trans|sw_sanitize }}
+                </p>
+            </div>
+        </div>
+    {% endif %}
+
+{% endblock %}

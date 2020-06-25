@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <!--
+    <card>
+        <title>General settings</title>
+        <title lang="de-DE">Allgemeine Einstellungen</title>
+
+        <input-field type="single-select">
+            <name>aosAnimation</name>
+            <options>
+                <option>
+                    <id>fadeUp</id>
+                    <name>fade-up</name>
+                </option>
+                <option>
+                    <id>fade-down</id>
+                    <name>fade-down</name>
+                </option>
+                <option>
+                    <id>fade-right</id>
+                    <name>fade-right</name>
+                </option>
+                <option>
+                    <id>fade-left</id>
+                    <name>fade-left</name>
+                </option>
+                <option>
+                    <id>fade-up-right</id>
+                    <name>fade-up-right</name>
+                </option>
+                <option>
+                    <id>fade-up-left</id>
+                    <name>fade-up-left</name>
+                </option>
+                <option>
+                    <id>fade-down-right</id>
+                    <name>fade-down-right</name>
+                </option>
+                <option>
+                    <id>fade-down-left</id>
+                    <name>fade-down-left</name>
+                </option>
+                <option>
+                    <id>flip-left</id>
+                    <name>flip-left</name>
+                </option>
+                <option>
+                    <id>flip-right</id>
+                    <name>fade-right</name>
+                </option>
+                <option>
+                    <id>flip-down</id>
+                    <name>flip-down</name>
+                </option>
+                <option>
+                    <id>flip-up</id>
+                    <name>fade-up</name>
+                </option>
+                <option>
+                    <id>zoom-in</id>
+                    <name>zoom-in</name>
+                </option>
+                <option>
+                    <id>zoom-in-up</id>
+                    <name>zoom-in-up</name>
+                </option>
+                <option>
+                    <id>zoom-in-down</id>
+                    <name>zoom-in-down</name>
+                </option>
+                <option>
+                    <id>zoom-in-left</id>
+                    <name>zoom-in-left</name>
+                </option>
+                <option>
+                    <id>zoom-in-right</id>
+                    <name>zoom-in-right</name>
+                </option>
+                <option>
+                    <id>zoom-out</id>
+                    <name>zoom-out</name>
+                </option>
+                <option>
+                    <id>zoom-out-up</id>
+                    <name>zoom-out-up</name>
+                </option>
+                <option>
+                    <id>zoom-out-down</id>
+                    <name>zoom-out-down</name>
+                </option>
+                <option>
+                    <id>zoom-out-right</id>
+                    <name>zoom-out-right</name>
+                </option>
+                <option>
+                    <id>zoom-out-left</id>
+                    <name>zoom-out-left</name>
+                </option>
+            </options>
+            <label>AOS Animation</label>
+            <defaultValue>fadeUp</defaultValue>
+        </input-field>
+    </card>
+    -->
+
+    <card>
+        <title>Social settings</title>
+        <title lang="de-DE">Social Media</title>
+
+        <input-field type="text">
+            <name>socialFacebookLink</name>
+            <label>Facebook</label>
+            <placeholder>https://</placeholder>
+            <defaultValue>https://</defaultValue>
+        </input-field>
+
+        <input-field type="text">
+            <name>socialTwitterLink</name>
+            <label>Twitter</label>
+            <placeholder>https://</placeholder>
+            <defaultValue>https://</defaultValue>
+        </input-field>
+
+        <input-field type="text">
+            <name>socialInstagramLink</name>
+            <label>Instagram</label>
+            <placeholder>https://</placeholder>
+            <defaultValue>https://</defaultValue>
+        </input-field>
+
+        <input-field type="text">
+            <name>socialYoutubeLink</name>
+            <label>Youtube</label>
+            <placeholder>https://</placeholder>
+            <defaultValue>https://</defaultValue>
+        </input-field>
+
+        <input-field type="text">
+            <name>socialPinterestLink</name>
+            <label>Pinterest</label>
+            <placeholder>https://</placeholder>
+            <defaultValue>https://</defaultValue>
+        </input-field>
+
+        <input-field type="text">
+            <name>socialXingLink</name>
+            <label>Xing</label>
+            <placeholder>https://</placeholder>
+            <defaultValue>https://</defaultValue>
+        </input-field>
+    </card>
+
+    <card>
+        <title>Header settings</title>
+        <title lang="de-DE">Header Einstellungen</title>
+
+        <!-- input-field type="single-select">
+            <name>headerType</name>
+            <options>
+                <option>
+                    <id>1</id>
+                    <name>Type 1</name>
+                    <name lang="de-DE">Ansicht 1</name>
+                </option>
+                <option>
+                    <id>2</id>
+                    <name>Type 2</name>
+                    <name lang="de-DE">Ansicht 2</name>
+                </option>
+            </options>
+            <defaultValue>2</defaultValue>
+            <label>Header Type</label>
+            <label lang="de-DE">Header Typ</label>
+        </input-field -->
+
+        <input-field type="bool">
+            <name>notificationBar</name>
+            <label>Enable notification bar</label>
+            <label lang="de-DE">Notification bar aktivieren</label>
+        </input-field>
+
+        <input-field type="bool">
+            <name>flyoutIcon</name>
+            <label>Icon Flyout menu</label>
+            <label lang="de-DE">Icon Flyout Menü</label>
+        </input-field>
+
+        <input-field type="text">
+            <name>logoMaxHeight</name>
+            <label>Logo max height in px</label>
+            <label lang="de-DE">Maximale Höhe des Logos in px</label>
+        </input-field>
+
+        <input-field type="bool">
+            <name>topBar</name>
+            <label>Enable the topbar</label>
+            <label lang="de-DE">Aktiviere die topbar</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+
+        <!--
+        <input-field type="bool">
+            <name>headerShowHome</name>
+            <label>Show home icon</label>
+            <label lang="de-DE">Zeige Startseite Button</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+        -->
+
+        <input-field type="bool">
+            <name>headerSticky</name>
+            <label>Sticky</label>
+            <label lang="de-DE">Sticky</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+
+        <input-field type="bool">
+            <name>headerMobileHamburgerRight</name>
+            <label>Mobile hamburger menu right</label>
+            <label lang="de-DE">Mobil Hamburger Menü rechts</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+
+        <input-field type="single-select">
+            <name>headerMobileLogoAlign</name>
+            <options>
+                <option>
+                    <id>start</id>
+                    <name>Left</name>
+                    <name lang="de-DE">Links</name>
+                </option>
+                <option>
+                    <id>center</id>
+                    <name>Middle</name>
+                    <name lang="de-DE">Mittig</name>
+                </option>
+                <option>
+                    <id>end</id>
+                    <name>Right</name>
+                    <name lang="de-DE">Rechts</name>
+                </option>
+            </options>
+            <label>Mobile logo align</label>
+            <label lang="de-DE">Mobil Logo Platzierung</label>
+        </input-field>
+
+        <input-field type="bool">
+            <name>headerMobileLogoMenuOneRow</name>
+            <label>Mobile logo and menu same row</label>
+            <label lang="de-DE">Mobil Logo und Menu in einer Zeile</label>
+            <defaultValue>true</defaultValue>
+            <helpText>When enabled the hamburger and logo position is disabled</helpText>
+            <helpText lang="de-DE">Wenn aktiviert ist die Logo und Menu Position deaktiviert</helpText>
+        </input-field>
+
+    </card>
+
+    <!--
+    <card>
+        <title>Productbox settings</title>
+        <title lang="de-DE">Produktbox Einstellungen</title>
+
+        <input-field type="bool">
+            <name>listingShowManufacturer</name>
+            <label>Show manufacturer</label>
+            <label lang="de-DE">Hersteller anzeigen</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+    </card>
+    -->
+
+    <card>
+        <title>Product detail settings</title>
+        <title lang="de-DE">Produkt Detail Einstellungen</title>
+
+        <!--
+        <input-field type="single-select">
+            <name>detailView</name>
+            <options>
+                <option>
+                    <id>1</id>
+                    <name>View 1</name>
+                    <name lang="de-DE">Ansicht 1</name>
+                </option>
+                <option>
+                    <id>2</id>
+                    <name>View 2</name>
+                    <name lang="de-DE">Ansicht 2</name>
+                </option>
+            </options>
+            <label>Detail View</label>
+            <label lang="de-DE">Detailansicht</label>
+        </input-field>
+        -->
+
+        <input-field type="bool">
+            <name>detailShowQuantitySelect</name>
+            <label>Show quantity select</label>
+            <label lang="de-DE">Mengenauswahl anzeigen</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+
+        <input-field type="bool">
+            <name>detailShowBuyBoxInfo</name>
+            <label>Show buy box info</label>
+            <label lang="de-DE">Zeigt die Info Box unter dem Warenkorb Button an</label>
+            <defaultValue>true</defaultValue>
+            <helpText>The text is a Snippet. Go to the Snippet settings to change the text. The key is buyBox_info</helpText>
+            <helpText lang="de-DE">Der Text ist ein Snippet. Bitte gehe in die Snippet Einstellungen, um den Text zu ändern. Der Snippet Key ist buyBox_info</helpText>
+        </input-field>
+
+        <input-field type="bool">
+            <name>detailShowTags</name>
+            <label>Show article tags</label>
+            <label lang="de-DE">Artikel Schlagwörter anzeigen</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+
+        <input-field type="bool">
+            <name>detailShowBreadcrumb</name>
+            <label>Show breadcrumb</label>
+            <label lang="de-DE">Breadcrumb anzeigen</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+
+        <input-field type="bool">
+            <name>detailShowManufacturerLogo</name>
+            <label>Show manufacturer logo instead of text</label>
+            <label lang="de-DE">Zeige Hersteller Logo anstatt Text</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+
+    </card>
+
+    <card>
+        <title>Footer settings</title>
+        <title lang="de-DE">Footer Einstellungen</title>
+
+        <input-field type="bool">
+            <name>footerSocialIcons</name>
+            <label>Show social icons</label>
+            <label lang="de-DE">Zeige social icons</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+
+        <input-field type="textarea">
+            <name>footerDisclaimerText</name>
+            <label>Disclaimer</label>
+        </input-field>
+
+    </card>
+</config>

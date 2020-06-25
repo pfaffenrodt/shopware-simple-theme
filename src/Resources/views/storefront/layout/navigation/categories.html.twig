@@ -1,0 +1,43 @@
+{% sw_extends '@Storefront/storefront/layout/navigation/categories.html.twig' %}
+
+{% block layout_navigation_categories_item %}
+	<div class="navigation-flyout-col">
+		{% block layout_navigation_categories_item_link %}
+			{% if treeItem.category.type == 'folder' %}
+				<div class="nav-item nav-link navigation-flyout-link is-level-{{ level }}" title="{{ treeItem.category.translated.name }}">
+					<span itemprop="name">{{ treeItem.category.translated.name }}</span>
+				</div>
+			{% else %}
+				<a class="nav-item nav-link navigation-flyout-link is-level-{{ level }} {{ treeItem.category.media|length ?: 'no-thumbnail' }}{% if treeItem.category.id is same as(page.header.navigation.active.id) %} active{% endif %}" href="{% if treeItem.category.externalLink %}{{ treeItem.category.externalLink }}{% else %}{{ seoUrl('frontend.navigation.page', { navigationId: treeItem.category.id }) }}{% endif %}" itemprop="url" title="{{ treeItem.category.translated.name }}">
+                    {% if treeItem.category.media %}
+                        {% sw_thumbnails 'navigation-flyout-teaser-image-thumbnails' with {
+                            media: treeItem.category.media,
+                            sizes: {
+                                'default': '30px'
+                            },
+                            attributes: {
+                                'class': 'navigation-flyout-teaser-image',
+                                'alt': (treeItem.category.media.translated.alt ?: ''),
+                                'title': (treeItem.category.media.translated.title ?: ''),
+                                'data-object-fit': 'cover'
+                            }
+                        } %}
+                    {% endif %}
+					<div class="nav-link-bottom">
+						<p class="nav-link-name" itemprop="name">{{ treeItem.category.translated.name }}</p>
+						<p class="nav-link-description">{{ treeItem.category.translated.description }}</p>
+					</div>
+				</a>
+			{% endif %}
+		{% endblock %}
+
+		{% block layout_navigation_categories_recoursion %}
+			{% if level < navigationMaxDepth %}
+				{% sw_include '@Storefront/storefront/layout/navigation/categories.html.twig' with {
+                    navigationTree: treeItem.children,
+                    level: level + 1
+                } only %}
+			{% endif %}
+		{% endblock %}
+	</div>
+{% endblock %}

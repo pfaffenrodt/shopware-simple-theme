@@ -1,0 +1,74 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/buy-widget.html.twig' %}
+
+
+{% block page_product_detail_price %}
+    <div class="d-flex flex-column flex-md-row align-items-baseline">
+        <div class="product-detail-price-container">
+            {% sw_include '@Storefront/storefront/page/product-detail/buy-widget-price.html.twig' %}
+        </div>
+{% endblock %}
+
+{% block page_product_detail_tax %}
+        <div class="product-detail-tax-container">
+            {% if context.taxState == "gross" %}
+                {% set taxText = "general.grossTaxInformation"|trans|sw_sanitize %}
+            {% else %}
+                {% set taxText = "general.netTaxInformation"|trans|sw_sanitize %}
+            {% endif %}
+
+            <p class="product-detail-tax">
+                {% block page_product_detail_tax_link %}
+                    <a class="product-detail-tax-link"
+                       href="{{ path('frontend.cms.page',{ id: shopware.config.core.basicInformation.shippingPaymentInfoPage }) }}"
+                       title="{{ taxText }}"
+                       data-toggle="modal"
+                       data-url="{{ path('frontend.cms.page',{ id: shopware.config.core.basicInformation.shippingPaymentInfoPage }) }}">
+                        {{ taxText }}
+                    </a>
+                {% endblock %}
+            </p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block page_product_detail_reviews %}
+    {% if page.product.ratingAverage > 0 and shopware.config.detail.showReviews %}
+        <p class="product-detail-reviews">
+            {% sw_include '@Storefront/storefront/component/review/rating.html.twig' with {
+                points: page.product.ratingAverage,
+                style: 'text-primary'
+            } %}
+            <a data-toggle="tab"
+               class="product-detail-reviews-link"
+               data-offcanvas-tabs="true"
+               data-remote-click="true"
+               data-remote-click-options='{
+                                        "selector": "#review-tab",
+                                        "scrollToElement": true
+                                    }'
+               href="#review-tab-pane"
+               aria-controls="review-tab-pane">
+                {{ page.reviews.totalReviews}}
+                {{ "detail.reviewLinkText"|trans({'%count%': page.reviews.totalReviews})|sw_sanitize }}
+            </a>
+        </p>
+    {% endif %}
+    {% if page.product.customFields.sas_product_short_description %}
+        <div class="product-detail-description">
+            {{ page.product.customFields.sas_product_short_description }}
+        </div>
+    {% endif %}
+    {% block page_product_detail_tags %}
+        {% if shopware.config.SasSimple.config.detailShowTags and page.extensions.tags|length %}
+            <ul class="product-tags list-unstyled list-inline">
+                {% for tag in page.extensions.tags %}
+                    <li><span class="badge badge-light">{{ tag.name }}</span></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endblock %}
+{% endblock %}
+
+{% block page_product_detail_delivery_informations %}{% endblock %}
+
+{% block page_product_detail_ordernumber_container %}{% endblock %}

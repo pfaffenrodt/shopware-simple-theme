@@ -1,0 +1,40 @@
+.category-navigation {
+    padding-left: 10px;
+
+    &.level-0 > {
+        .category-navigation-entry {
+            border-bottom: none;
+        }
+    }
+
+    &.level-1 {
+        margin: 8px 0;
+    }
+
+    &.level-0 {
+        padding-left: 0;
+        font-size: 14px;
+    }
+}
+
+.category-navigation-entry {
+    margin: 0 0 8px;
+    display: block;
+}
+
+.category-navigation-link {
+    padding: 0 0 2px 0;
+    line-height: 20px;
+    letter-spacing: .5px;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+    display: inline;
+
+    &:hover {
+        border-bottom-color: $border-color;
+    }
+
+    &.in-path {
+        font-weight: $font-weight-normal;
+    }
+}

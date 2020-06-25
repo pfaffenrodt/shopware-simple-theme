@@ -1,0 +1,10 @@
+body {
+    &.is-act-home {
+        .container-main {
+            padding-top: 0;
+        }
+        .cms-breadcrump {
+            display: none;
+        }
+    }
+}

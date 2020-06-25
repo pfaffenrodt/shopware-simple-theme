@@ -1,0 +1,34 @@
+{
+    "name": "sas/simple",
+    "description": "Simple theme plugin",
+    "version": "v1.0.1",
+    "type": "shopware-platform-plugin",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Shape & Shift",
+            "role": "Manufacturer",
+            "homepage": "https://shapeandshift.dev"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sas\\Simple\\": "src/"
+        }
+    },
+    "require": {
+        "shopware/core": "*",
+        "shopware/storefront": "*"
+    },
+    "extra": {
+    "shopware-plugin-class": "Sas\\Simple\\SasSimple",
+        "label": {
+          "de-DE": "Simple theme",
+          "en-GB": "Simple theme"
+        },
+        "description": {
+          "de-DE": "Simple theme von Shape & Shift",
+          "en-GB": "Simple theme from Shape & Shift"
+        }
+    }
+}
