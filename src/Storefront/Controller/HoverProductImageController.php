@@ -2,8 +2,8 @@
 
 namespace Sas\Simple\Storefront\Controller;
 
+use Shopware\Core\Content\Product\Aggregate\ProductMedia\ProductMediaEntity;
 use Shopware\Core\Content\Product\Exception\ProductNotFoundException;
-use Shopware\Core\Content\Product\ProductCollection;
 use Shopware\Core\Content\Product\ProductEntity;
 use Shopware\Core\Framework\Context;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityRepositoryInterface;
@@ -35,27 +35,31 @@ class HoverProductImageController extends StorefrontController
         /** @var EntityRepositoryInterface $productRepository */
         $productRepository = $this->container->get('product.repository');
 
-        /** @var ProductCollection $productCollection */
-        $productCollection = $productRepository->search(
+        /** @var ProductEntity|null $product */
+        $product = $productRepository->search(
             (new Criteria([$productId]))->addAssociation('media'),
             $salesChannelContext->getContext()
-        )->getEntities();
+        )->getEntities()->first();
 
-        /** @var ProductEntity|null $firstProduct */
-        $firstProduct = $productCollection->first();
-        $specificProduct = $productCollection->get($productId);
-
-        if ($firstProduct === null) {
+        if ($product === null) {
             throw new ProductNotFoundException($productId);
         }
 
-        $media = $firstProduct->getMedia();
-        if ($media === null) {
-            // throw custom exception
+        if ($product->getMedia()->first() === null) {
+            throw new \Exception('This product have no image to show');
         }
 
-       // dd($specificProduct->getMedia()->last()->getMedia());
+        /** @var ProductMediaEntity $nextMedia */
+        $nextMedia = [];
+        foreach ($product->getMedia() as $mediaId => $media) {
+            if ($mediaId === $product->getCoverId()) {
+                continue;
+            }
 
-        return new JsonResponse($specificProduct->getMedia()->last()->getMedia()->getUrl());
+            $nextMedia = $media;
+            break;
+        }
+
+        return new JsonResponse($nextMedia->getMedia()->getUrl());
     }
 }
