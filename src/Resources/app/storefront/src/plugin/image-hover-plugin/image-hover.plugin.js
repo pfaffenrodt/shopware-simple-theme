@@ -1,5 +1,5 @@
 import Plugin from 'src/plugin-system/plugin.class';
-import HttpClient from 'src/service/http-client.service';
+import StoreApiClient from 'src/service/store-api-client.service';
 
 export default class ImageHover extends Plugin {
     static options = {
@@ -12,9 +12,7 @@ export default class ImageHover extends Plugin {
     };
 
     init() {
-        this._client = new HttpClient(window.accessKey);
-
-        console.log('image hover plugin loaded ...');
+        this._client = new StoreApiClient():
 
         this.el.addEventListener('mouseenter', () => {
             if(this.el.dataset.loaded === 'false') {
@@ -30,7 +28,6 @@ export default class ImageHover extends Plugin {
     fetch() {
         this._client.get(`/sales-channel-api/v1/sas/product/${this.el.dataset.productId}`, (response) => {
 
-            //const {0: {url: thumbnail}}  = JSON.parse(responseText);
             const thumbnail = JSON.parse(response);
 
             const image = new Image();
