@@ -12,7 +12,7 @@ export default class ImageHover extends Plugin {
     };
 
     init() {
-        this._client = new StoreApiClient():
+        this._client = new StoreApiClient();
 
         this.el.addEventListener('mouseenter', () => {
             if(this.el.dataset.loaded === 'false') {
