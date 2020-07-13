@@ -28,10 +28,14 @@ export default class ImageHover extends Plugin {
     fetch() {
         this._client.get(`/sales-channel-api/v1/sas/product/${this.el.dataset.productId}`, (response) => {
 
-            const thumbnail = JSON.parse(response);
+            const jsonResponse = JSON.parse(response);
+
+            if (!jsonResponse.thumbnail) {
+                return;
+            }
 
             const image = new Image();
-            image.src = thumbnail;
+            image.src = jsonResponse.thumbnail;
             image.id = this.el.dataset.productId;
             image.classList.add('product-overlay');
 

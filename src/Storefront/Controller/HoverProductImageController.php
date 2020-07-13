@@ -46,7 +46,7 @@ class HoverProductImageController extends StorefrontController
         }
 
         if ($product->getMedia()->count() < 2) {
-            throw new \Exception('This product have no image to show');
+            return new JsonResponse(["message" => "This product has no hover image to show"]);
         }
 
         /** @var ProductMediaEntity $nextMedia */
@@ -60,6 +60,6 @@ class HoverProductImageController extends StorefrontController
             break;
         }
 
-        return new JsonResponse($nextMedia->getMedia()->getUrl());
+        return new JsonResponse(["thumbnail" => $nextMedia->getMedia()->getUrl()]);
     }
 }
